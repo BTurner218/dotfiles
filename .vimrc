@@ -26,6 +26,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'alvan/vim-closetag'
+Plugin 'chrisbra/colorizer'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -76,6 +77,9 @@ let g:syntastic_check_on_wq = 0
 " NERDTree Settings
 nnoremap <F4> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+" Colorizer Settings
+let g:colorizer_auto_filetype='css,html,scss'
 
 " YouCompleteMe Settings
 set encoding=utf-8
