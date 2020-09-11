@@ -1,48 +1,133 @@
-syntax on
-
 call plug#begin()
 
-Plug 'ayu-theme/ayu-vim'
-Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-Plug 'easymotion/vim-easymotion'
-Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
+Plug 'jonathanfilip/vim-lucius'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+Plug 'prettier/vim-prettier'
+Plug 'jiangmiao/auto-pairs'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'alvan/vim-closetag'
+Plug 'liuchengxu/vim-which-key'
+Plug 'chrisbra/colorizer'
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 
-" Theme Settings
-set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
-let g:airline_powerline_fonts = 1
-
 " General Settings
+colorscheme lucius
+LuciusDark
+set background=dark
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+set number " Sets line numbers
 set relativenumber
 set mouse=a
-set noswapfile
-set nobackup nowritebackup
+
+" Key Mappings
+map <Space> <Leader>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+" WhichKey
+let g:mapleader = "\<Space>"
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+"Fugitive
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gb :Gblame<CR>
+
+" Tab spaces
+filetype plugin indent on
 set tabstop=2
-set softtabstop=0 noexpandtab
 set shiftwidth=2
-nnoremap <SPACE> <Nop>
-let mapleader=" "
+set expandtab
 
-" Custom Keybindings
-imap jj <Esc>
+" Put swap files somewhere else
+set backupdir=~/.config/nvim/temp-swaps/
+set directory=~/.config/nvim/temp-swaps/
 
-" NERDTree settings
-nmap <F4> :NERDTreeToggle<CR>
-
+" CTRLP Settings
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" Airline Settings
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+ 
+" Syntastic Settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+ 
+" NERDTree Settings
+nnoremap <F4> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+" WhichKey Settings
+let g:which_key_use_floating_win = 0
+
+"vim-closetag Settings
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be close    d while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<Leader>>'
+
+" Filetype Settings
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+augroup END
+
+" Colorizer settings
+let g:colorizer_auto_filetype='css,html,scss'
+
+" coc config
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -84,11 +169,7 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
@@ -100,7 +181,6 @@ else
 endif
 
 " Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
@@ -161,7 +241,7 @@ xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
 " Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of language server.
+" Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
@@ -179,20 +259,28 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Mappings for CoCList
+" Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" Omnisharp Settings
+let g:OmniSharp_translate_cygwin_wsl = 1
+
+" Indent Guide Settings
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  guibg=red   ctermbg=3
+hi IndentGuidesEven guibg=green ctermbg=4
