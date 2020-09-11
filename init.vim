@@ -4,6 +4,7 @@ call plug#begin()
 
 Plug 'ayu-theme/ayu-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
@@ -15,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
