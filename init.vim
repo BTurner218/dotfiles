@@ -17,6 +17,7 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
+Plug 'rhysd/git-messenger.vim'
 
 call plug#end()
 
