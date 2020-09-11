@@ -11,7 +11,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'easymotion/vim-easymotion'
@@ -19,6 +18,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 Plug 'rhysd/git-messenger.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -30,6 +31,7 @@ let g:airline_powerline_fonts = 1
 
 " General Settings
 set relativenumber
+set nowrap
 set mouse=a
 set noswapfile
 set nobackup nowritebackup
@@ -46,8 +48,14 @@ imap jj <Esc>
 nmap <leader>m :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
-" CtrlP settings
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" FZF settings
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+nnoremap <C-p> :FZF<CR>
+map <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
+let $FZF_DEFAULT_COMMAND="rg --files --hidden"
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " START Coc
 " TextEdit might fail if hidden is not set.
