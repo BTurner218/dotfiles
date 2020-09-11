@@ -18,6 +18,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 Plug 'rhysd/git-messenger.vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
