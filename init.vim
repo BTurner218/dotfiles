@@ -41,7 +41,8 @@ let mapleader=" "
 imap jj <Esc>
 
 " NERDTree settings
-nmap <F4> :NERDTreeToggle<CR>
+nmap <leader>m :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeFind<CR>
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
