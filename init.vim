@@ -30,6 +30,7 @@ colorscheme ayu
 let g:airline_powerline_fonts = 1
 
 " General Settings
+set number
 set relativenumber
 set nowrap
 set mouse=a
