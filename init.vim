@@ -2,7 +2,7 @@ syntax on
 
 call plug#begin()
 
-Plug 'ayu-theme/ayu-vim'
+Plug 'gruvbox-community/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
@@ -25,9 +25,8 @@ call plug#end()
 
 " Theme Settings
 set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
-let g:airline_powerline_fonts = 1
+colorscheme gruvbox
+set background=dark
 
 " General Settings
 set number
@@ -50,6 +49,7 @@ nmap <leader>m :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
 " Airline settings
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
