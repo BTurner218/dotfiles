@@ -2,7 +2,7 @@ syntax on
 
 call plug#begin()
 
-Plug 'gruvbox-community/gruvbox'
+Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
@@ -25,9 +25,7 @@ call plug#end()
 
 " Theme Settings
 set termguicolors
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-set background=dark
+colorscheme onedark
 
 " General Settings
 set number
@@ -50,6 +48,7 @@ nmap <leader>m :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
 " Airline settings
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
