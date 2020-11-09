@@ -3,6 +3,7 @@ syntax on
 call plug#begin()
 
 Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
@@ -26,7 +27,8 @@ call plug#end()
 
 " Theme Settings
 set termguicolors
-colorscheme onedark
+let ayucolor="mirage"
+colorscheme ayu
 
 " General Settings
 set number
