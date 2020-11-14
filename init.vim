@@ -81,6 +81,13 @@ require'nvim-treesitter.configs'.setup {
 
 EOF
 
+" React Config
+augroup ReactFiletypes
+  autocmd!
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascriptreact
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescriptreact
+augroup END
+
 " START Coc
 " TextEdit might fail if hidden is not set.
 set hidden
