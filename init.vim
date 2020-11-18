@@ -39,7 +39,7 @@ set mouse=a
 set noswapfile
 set nobackup nowritebackup
 set tabstop=2
-set softtabstop=0 noexpandtab
+set softtabstop=0 expandtab
 set shiftwidth=2
 nnoremap <SPACE> <Nop>
 let mapleader=" "
