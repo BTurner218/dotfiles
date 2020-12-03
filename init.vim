@@ -22,7 +22,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
@@ -67,19 +66,6 @@ map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
-
-" Tree Sitter
-lua << EOF
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = {},  -- list of language that will be disabled
-  },
-}
-
-EOF
 
 " React Config
 augroup ReactFiletypes
