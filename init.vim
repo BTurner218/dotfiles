@@ -40,11 +40,13 @@ set nobackup nowritebackup
 set tabstop=2
 set softtabstop=0 expandtab
 set shiftwidth=2
+set colorcolumn=80
+set signcolumn=yes
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 " Custom Keybindings
-imap jj <Esc>
+imap jk <Esc>
 
 " NERDTree settings
 nmap <leader>m :NERDTreeToggle<CR>
