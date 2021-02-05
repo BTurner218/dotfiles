@@ -2,4 +2,4 @@ set clipboard+=unnamed
 set number
 set relativenumber
 set incsearch
-imap jj <Esc>
+imap jk <Esc>
