@@ -74,6 +74,8 @@ plugins=(
   command-not-found
   wd
   zsh-syntax-highlighting
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
