@@ -109,5 +109,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh 
 prompt_context(){}
 
+eval "$(rbenv init -)"
+
 export PATH=~/.local/bin:$PATH
 
