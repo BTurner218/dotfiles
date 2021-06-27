@@ -109,7 +109,12 @@ source $ZSH/oh-my-zsh.sh
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh 
 prompt_context(){}
 
-eval "$(rbenv init -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export PATH=~/.local/bin:$PATH
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
+export PATH=${PATH}:$HOME/Android/Sdk/platform-tools/
