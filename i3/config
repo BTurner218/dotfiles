@@ -202,6 +202,7 @@ bar {
 
 bindsym $mod+shift+x exec i3lock --color=353945
 bindsym $mod+shift+b exec firefox
+bindsym $mod+shift+f exec thunar
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -b
