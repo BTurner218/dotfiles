@@ -38,8 +38,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -179,8 +179,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-default_border pixel 1
-default_floating_border pixel 1
+for_window [class=".*"] border pixel 2
 client.focused "#5294e2" "#5294e2" "#ffffff" "#5294e2"
 client.unfocused "#2f343f" "#2f343f" "#676e7d" "#2f343f"
 client.urgent "#e53935" "#e53935" "#ffffff" "#e53935"
@@ -188,7 +187,7 @@ client.urgent "#e53935" "#e53935" "#ffffff" "#e53935"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+        status_command i3blocks
 
         position top
         font pango:Ubuntu Mono 12
@@ -200,11 +199,16 @@ bar {
         }
 }
 
+# Gaps
+gaps inner 10
+gaps outer 0
+#smart_gaps on
+
 bindsym $mod+shift+x exec i3lock --color=353945
 bindsym $mod+shift+b exec firefox
 bindsym $mod+shift+f exec thunar
 bindsym $mod+c exec zenity --calendar
 
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id dunst
