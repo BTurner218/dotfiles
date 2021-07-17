@@ -29,6 +29,8 @@ call plug#end()
 set termguicolors
 let ayucolor="mirage"
 colorscheme ayu
+" Transparent background
+hi! Normal ctermbg=NONE guibg=NONE
 
 " General Settings
 set number
