@@ -214,6 +214,6 @@ bindsym $mod+shift+f exec thunar
 bindsym $mod+c exec zenity --calendar
 
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom -b --backend glx
+exec --no-startup-id picom -b --backend glx --config ~/git/dotfiles/picom.conf
 exec --no-startup-id dunst
 exec --no-startup-id redshift-gtk
