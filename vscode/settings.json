@@ -1,0 +1,132 @@
+{
+  "workbench.colorTheme": "Bearded Theme Arc",
+  "workbench.preferredDarkColorTheme": "Bearded Theme Arc",
+  "workbench.preferredLightColorTheme": "Bearded Theme Light",
+  "workbench.iconTheme": "bearded-icons",
+  // "oneDarkPro.editorTheme": "ayu",
+  // "oneDarkPro.bold": true,
+  // "editor.tokenColorCustomizations": {
+  //   "[One Dark Pro]": {
+  //     "textMateRules": [
+  //       {
+  //         "name": "js object key",
+  //         "scope": "meta.object-literal.key",
+  //         "settings": {
+  //           "foreground": "#56b6c2"
+  //         }
+  //       }
+  //     ]
+  //   }
+  // },
+  "bracket-pair-colorizer-2.colors": ["#D39E17", "#A15DEF", "#3398DB"],
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "window.restoreWindows": "none",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "sync.gist": "154b350dd747372a9eea5befc8ae2287",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {},
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "rest-client.enableTelemetry": false,
+  "leetcode.defaultLanguage": "csharp",
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.workspaceFolder": "/home/brandonturner/.leetcode",
+  "leetcode.hint.commandShortcut": false,
+  "window.titleBarStyle": "custom",
+  "editor.rulers": [80],
+  "code-runner.enableAppInsights": false,
+
+  // VSCode VIM Start
+  "editor.lineNumbers": "relative",
+  "vim.easymotion": true,
+  "vim.easymotionMarkerBackgroundColor": "#000000",
+  "vim.easymotionMarkerForegroundColorOneChar": "#FF0000",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#00FF00",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#00FF00",
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.toggleMinimap"]
+    },
+    {
+      "before": ["<leader>", "g"],
+      "commands": ["workbench.view.scm"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  // "editor.scrollbar.horizontal": "hidden",
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.overviewRulerBorder": false,
+  "workbench.startupEditor": "none",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "json.schemas": [
+    {
+      "name": "vscode-expo-manifest",
+      "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json",
+      "fileMatch": [
+        "app.json",
+        "app.config.json"
+      ]
+    }
+  ],
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "redhat.telemetry.enabled": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/brandont/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false
+  // "window.menuBarVisibility": "toggle", // VSCode VIM End
+}
