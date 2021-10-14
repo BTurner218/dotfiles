@@ -1,8 +1,8 @@
 {
-  "workbench.colorTheme": "Bearded Theme Arc",
-  "workbench.preferredDarkColorTheme": "Bearded Theme Arc",
-  "workbench.preferredLightColorTheme": "Bearded Theme Light",
-  "workbench.iconTheme": "bearded-icons",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "workbench.preferredLightColorTheme": "Default Light+",
+  // "workbench.iconTheme": "bearded-icons",
   // "oneDarkPro.editorTheme": "ayu",
   // "oneDarkPro.bold": true,
   // "editor.tokenColorCustomizations": {
@@ -18,7 +18,7 @@
   //     ]
   //   }
   // },
-  "bracket-pair-colorizer-2.colors": ["#D39E17", "#A15DEF", "#3398DB"],
+  // "bracket-pair-colorizer-2.colors": ["#D39E17", "#A15DEF", "#3398DB"],
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
