@@ -1,7 +1,7 @@
 {
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.preferredDarkColorTheme": "Default Dark+",
-  "workbench.preferredLightColorTheme": "Default Light+",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "window.restoreWindows": "none",
