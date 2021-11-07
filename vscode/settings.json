@@ -36,8 +36,11 @@
   "json.schemas": [
     {
       "name": "vscode-expo-manifest",
-      "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json",
-      "fileMatch": ["app.json", "app.config.json"]
+      "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-43.0.0.json",
+      "fileMatch": [
+        "app.json",
+        "app.config.json"
+      ]
     }
   ],
   "workbench.sideBar.location": "right",
