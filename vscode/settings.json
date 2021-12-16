@@ -1,10 +1,10 @@
 {
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "window.restoreWindows": "none",
@@ -39,10 +39,7 @@
     {
       "name": "vscode-expo-manifest",
       "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-43.0.0.json",
-      "fileMatch": [
-        "app.json",
-        "app.config.json"
-      ]
+      "fileMatch": ["app.json", "app.config.json"]
     }
   ],
   "workbench.sideBar.location": "right",
