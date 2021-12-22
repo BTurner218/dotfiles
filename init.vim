@@ -11,8 +11,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'easymotion/vim-easymotion'
@@ -53,13 +53,9 @@ imap jk <Esc>
 nmap <leader>m :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
-" Airline settings
-" let g:airline_theme='onedark'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
+lua << END
+require'lualine'.setup()
+END
 
 " FZF settings
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
