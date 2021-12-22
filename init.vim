@@ -4,6 +4,7 @@ call plug#begin()
 
 Plug 'joshdick/onedark.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
@@ -27,8 +28,8 @@ call plug#end()
 
 " Theme Settings
 set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
+" let ayucolor="mirage"
+colorscheme tokyonight
 
 " General Settings
 set number
