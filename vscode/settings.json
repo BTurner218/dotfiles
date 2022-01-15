@@ -38,11 +38,8 @@
   "json.schemas": [
     {
       "name": "vscode-expo-manifest",
-      "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-43.0.0.json",
-      "fileMatch": [
-        "app.json",
-        "app.config.json"
-      ]
+      "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-44.0.0.json",
+      "fileMatch": ["app.json", "app.config.json"]
     }
   ],
   "workbench.sideBar.location": "right",
@@ -69,5 +66,13 @@
     "**/.factorypath": true
   },
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/brandont/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "cmake.environment": {
+    "PATH": "~/kde/usr/bin:${env:PATH}",
+    "XDG_DATA_DIRS": "~/kde/usr/share:${env:XDG_DATA_DIRS}",
+    "XDG_CONFIG_DIRS": "~/kde/usr/etc/xdg:${env:XDG_CONFIG_DIRS}",
+    "QT_PLUGIN_PATH": "~/kde/usr/lib/plugins:${env:QT_PLUGIN_PATH}",
+    "QML2_IMPORT_PATH": "~/kde/usr/lib/qml:${env:QML2_IMPORT_PATH}",
+    "QT_QUICK_CONTROLS_STYLE_PATH": "~/kde/usr/lib/qml/QtQuick/Controls.2/:${env:QT_QUICK_CONTROLS_STYLE_PATH}"
+  }
 }
