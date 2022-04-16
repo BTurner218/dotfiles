@@ -1,10 +1,10 @@
 {
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-  "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "editor.fontFamily": "JetBrains Mono",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "workbench.preferredLightColorTheme": "Default Light+",
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "workbench.iconTheme": "material-icon-theme",
+  "editor.cursorBlinking": "smooth",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "window.restoreWindows": "none",
@@ -39,10 +39,7 @@
     {
       "name": "vscode-expo-manifest",
       "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-44.0.0.json",
-      "fileMatch": [
-        "app.json",
-        "app.config.json"
-      ]
+      "fileMatch": ["app.json", "app.config.json"]
     }
   ],
   "workbench.sideBar.location": "right",
@@ -57,11 +54,7 @@
   ],
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "prettier.singleQuote": true,
-  "prettier.eslintIntegration": true,
-  "prettier.tabWidth": 2,
   "editor.formatOnSave": true,
-  "editor.minimap.enabled": false,
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -69,7 +62,6 @@
     "**/.factorypath": true
   },
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/brandont/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-  "workbench.activityBar.visible": false,
   "cmake.environment": {
     "PATH": "~/kde/usr/bin:${env:PATH}",
     "XDG_DATA_DIRS": "~/kde/usr/share:${env:XDG_DATA_DIRS}",

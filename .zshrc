@@ -159,3 +159,4 @@ complete -o nospace -F _comp-kdesrc-run kdesrc-run
 
 ################################################################################
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
