@@ -115,9 +115,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=~/.local/bin:$PATH
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
 export PATH=${PATH}:$HOME/Android/Sdk/platform-tools/
 
 export PATH="/usr/share/dotnet/":$PATH
