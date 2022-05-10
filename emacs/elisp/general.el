@@ -8,6 +8,9 @@
 (package-initialize)
 (package-refresh-contents)
 
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 ;; General Settings
 (menu-bar-mode -1)
 (tool-bar-mode -1)
