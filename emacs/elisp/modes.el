@@ -12,3 +12,6 @@
 (ivy-mode)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+
+;; Projectile
+(projectile-mode +1)
