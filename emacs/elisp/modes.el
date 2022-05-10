@@ -1,5 +1,6 @@
 (require 'evil)
 (use-package undo-fu)
+(require 'prettier-js)
 
 ;; Evil Mode
 ;; Download Evil
@@ -21,8 +22,6 @@
 (use-package web-mode  :ensure t
   :mode (("\\.js\\'" . web-mode)
          ("\\.jsx\\'" . web-mode)
-         ("\\.ts\\'" . web-mode)
-         ("\\.tsx\\'" . web-mode)
          ("\\.html\\'" . web-mode)
          ("\\.vue\\'" . web-mode)
 	 ("\\.json\\'" . web-mode))
@@ -34,7 +33,23 @@
 
 (require 'lsp-mode)
 (add-hook 'web-mode-hook #'lsp)
+(add-hook 'csharp-mode-hook #'lsp)
 (lsp-treemacs-sync-mode 1)
 
 ;; Company
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; TypeScript Web
+;;(define-derived-mode typescript-tsx-mode web-mode "TypeScript/TSX")
+;;(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-tsx-mode))
+;;(add-to-list 'tree-sitter-major-mode-language-alist '(typescript-tsx-mode . tsx))
+
+(define-derived-mode typescript-tsx-mode typescript-mode "TSX"
+  "Major mode for editing TSX files.
+
+Refer to Typescript documentation for syntactic differences between normal and TSX
+variants of Typescript.")
+(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-tsx-mode))
+
+;; prettier-js
+(add-hook 'typescript-mode-hook 'prettier-js-mode)
