@@ -31,9 +31,19 @@
 	'(("jsx" . "\\.js[x]?\\'")))
   )
 
-(require 'lsp-mode)
-(add-hook 'web-mode-hook #'lsp)
-(add-hook 'csharp-mode-hook #'lsp)
+;; lsp Mode
+(use-package lsp-mode
+  :init
+  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+         (typescript-mode . lsp-defered)
+        )
+  :commands lsp)
+
+;; optionally
+(use-package lsp-ui :commands lsp-ui-mode)
+;; if you are ivy user
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 (lsp-treemacs-sync-mode 1)
 
 ;; Company
