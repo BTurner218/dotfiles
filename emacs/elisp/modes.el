@@ -1,4 +1,5 @@
 (require 'evil)
+(use-package undo-fu)
 
 ;; Evil Mode
 ;; Download Evil
@@ -7,6 +8,7 @@
 
 ;; Enable Evil
 (evil-mode 1)
+(setq evil-undo-system 'undo-fu)
 
 ;; Ivy Mode
 (ivy-mode)
