@@ -8,6 +8,7 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
+local lain = require("lain")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -115,6 +116,12 @@ end
 
 praisewidget = wibox.widget.textbox()
 praisewidget.text = "You are great!"
+
+local mybattery = lain.widget.bat {
+    settings = function()
+        widget:set_markup(" " .. bat_now.perc .. "% " .. bat_now.status .. " ")
+    end
+}
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -230,7 +237,6 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
-            praisewidget,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -239,6 +245,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
+            mybattery,
             mytextclock,
             s.mylayoutbox,
         },
@@ -588,4 +595,7 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+awful.spawn.with_shell("picom -b --backend glx --config /home/brandont/git/dotfiles/picom.conf")
+awful.spawn.with_shell("xfce4-power-manager")
 -- }}}
