@@ -25,6 +25,7 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 -- Personal variables
 local browser = "brave-browser"
+local fileManager = "thunar"
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -126,6 +127,39 @@ local mybattery = lain.widget.bat {
         widget:set_markup(" " .. bat_now.perc .. "% " .. bat_now.status .. " ")
     end
 }
+
+-- PulseAudio volume (based on multicolor theme)
+local volume = lain.widget.pulse {
+    settings = function()
+        vlevel = volume_now.left .. "-" .. volume_now.right .. "% | " .. volume_now.device
+        if volume_now.muted == "yes" then
+            vlevel = vlevel .. " M"
+        end
+        widget:set_markup(lain.util.markup("#7493d2", vlevel))
+    end
+}
+
+volume.widget:buttons(awful.util.table.join(
+    awful.button({}, 1, function() -- left click
+        awful.spawn("pavucontrol")
+    end),
+    awful.button({}, 2, function() -- middle click
+        os.execute(string.format("pactl set-sink-volume %s 100%%", volume.device))
+        volume.update()
+    end),
+    awful.button({}, 3, function() -- right click
+        os.execute(string.format("pactl set-sink-mute %s toggle", volume.device))
+        volume.update()
+    end),
+    awful.button({}, 4, function() -- scroll up
+        os.execute(string.format("pactl set-sink-volume %s +1%%", volume.device))
+        volume.update()
+    end),
+    awful.button({}, 5, function() -- scroll down
+        os.execute(string.format("pactl set-sink-volume %s -1%%", volume.device))
+        volume.update()
+    end)
+))
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -244,6 +278,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
+            volume,
             mybattery,
             mytextclock,
             s.mylayoutbox,
@@ -363,7 +398,36 @@ globalkeys = gears.table.join(
 
     -- Personal shortcuts
     awful.key({ modkey, altkey}, "b", function() awful.spawn(browser) end,
-              {description="launch browser", group="gui apps"})
+              {description="launch browser", group="gui apps"}),
+    awful.key({ modkey, altkey}, "f", function() awful.spawn(fileManager) end,
+              {description="launch file manager", group="gui apps"}),
+    
+    -- PulseAudio volume control
+    awful.key({ altkey }, "Up",
+        function ()
+            os.execute(string.format("pactl set-sink-volume %s +1%%", volume.device))
+            volume.update()
+        end),
+    awful.key({ altkey }, "Down",
+        function ()
+            os.execute(string.format("pactl set-sink-volume %s -1%%", volume.device))
+            volume.update()
+        end),
+    awful.key({ altkey }, "m",
+        function ()
+            os.execute(string.format("pactl set-sink-mute %s toggle", volume.device))
+            volume.update()
+        end),
+    awful.key({ altkey, "Control" }, "m",
+        function ()
+            os.execute(string.format("pactl set-sink-volume %s 100%%", volume.device))
+            volume.update()
+        end),
+    awful.key({ altkey, "Control" }, "0",
+        function ()
+            os.execute(string.format("pactl set-sink-volume %s 0%%", volume.device))
+            volume.update()
+        end)
 )
 
 clientkeys = gears.table.join(
@@ -604,4 +668,5 @@ beautiful.gap_single_client = true
 
 awful.spawn.with_shell("picom -b --backend glx --config /home/brandont/git/dotfiles/picom.conf")
 awful.spawn.with_shell("xfce4-power-manager")
+awful.spawn.with_shell("nm-applet")
 -- }}}
