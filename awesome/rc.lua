@@ -663,7 +663,7 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-beautiful.useless_gap = 2
+beautiful.useless_gap = 5
 beautiful.gap_single_client = true
 
 awful.spawn.with_shell("picom -b --backend glx --config /home/brandont/git/dotfiles/picom.conf")
