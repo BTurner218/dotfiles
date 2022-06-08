@@ -9,6 +9,7 @@ Plug('kyazdani42/nvim-tree.lua')
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('neovim/nvim-lspconfig')
 Plug ('akinsho/toggleterm.nvim', {tag = 'v1.*'})
+Plug('airblade/vim-gitgutter')
 
 vim.call('plug#end')
 
