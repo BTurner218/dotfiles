@@ -8,6 +8,7 @@ Plug('kyazdani42/nvim-web-devicons')
 Plug('kyazdani42/nvim-tree.lua')
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('neovim/nvim-lspconfig')
+Plug ('akinsho/toggleterm.nvim', {tag = 'v1.*'})
 
 vim.call('plug#end')
 
@@ -18,4 +19,5 @@ require("plugins/lualine")
 require("plugins/nvim-tree")
 require("plugins/nvim-treesitter")
 require("plugins/nvim-lspconfig")
+require("plugins/toggleterm")
 
