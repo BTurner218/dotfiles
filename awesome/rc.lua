@@ -669,4 +669,5 @@ beautiful.gap_single_client = true
 awful.spawn.with_shell("picom -b --backend glx --config /home/brandont/git/dotfiles/picom.conf")
 awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("polychromatic-tray-applet")
 -- }}}
