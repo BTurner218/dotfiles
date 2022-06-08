@@ -13,6 +13,7 @@ Plug('airblade/vim-gitgutter')
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('darrikonn/vim-gofmt')
+Plug('sbdchd/neoformat')
 
 vim.call('plug#end')
 
@@ -24,4 +25,5 @@ require("plugins/nvim-tree")
 require("plugins/nvim-treesitter")
 require("plugins/nvim-lspconfig")
 require("plugins/toggleterm")
+require("plugins/neoformat")
 
