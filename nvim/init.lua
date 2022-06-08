@@ -12,6 +12,7 @@ Plug ('akinsho/toggleterm.nvim', {tag = 'v1.*'})
 Plug('airblade/vim-gitgutter')
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
+Plug('darrikonn/vim-gofmt')
 
 vim.call('plug#end')
 
