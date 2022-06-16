@@ -119,6 +119,8 @@ export PATH=${PATH}:$HOME/Android/Sdk/platform-tools/
 
 export PATH="/usr/share/dotnet/":$PATH
 
+export PATH=~/Developer/tools/:$PATH
+
 # kdesrc-build #################################################################
 
 ## Add kdesrc-build to PATH
