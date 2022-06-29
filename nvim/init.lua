@@ -19,6 +19,7 @@ Plug('hrsh7th/cmp-nvim-lsp')
 Plug('saadparwaiz1/cmp_luasnip')
 Plug('L3MON4D3/LuaSnip')
 Plug('tpope/vim-fugitive')
+Plug('tpope/vim-commentary')
 
 vim.call('plug#end')
 
