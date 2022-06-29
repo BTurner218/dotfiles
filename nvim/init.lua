@@ -20,6 +20,7 @@ Plug('saadparwaiz1/cmp_luasnip')
 Plug('L3MON4D3/LuaSnip')
 Plug('tpope/vim-fugitive')
 Plug('tpope/vim-commentary')
+Plug('lukas-reineke/indent-blankline.nvim')
 
 vim.call('plug#end')
 
