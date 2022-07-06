@@ -22,6 +22,7 @@ Plug('tpope/vim-fugitive')
 Plug('tpope/vim-commentary')
 Plug('tpope/vim-surround')
 Plug('lukas-reineke/indent-blankline.nvim')
+Plug('phaazon/hop.nvim')
 
 vim.call('plug#end')
 
@@ -35,4 +36,5 @@ require("plugins/nvim-lspconfig")
 require("plugins/toggleterm")
 require("plugins/neoformat")
 require("plugins/nvim-cmp")
+require('plugins/hop')
 
