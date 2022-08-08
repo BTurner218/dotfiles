@@ -23,6 +23,7 @@ Plug('tpope/vim-commentary')
 Plug('tpope/vim-surround')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('phaazon/hop.nvim')
+Plug('prettier/vim-prettier', {['do'] = 'yarn install --frozen-lockfile --production'})
 
 vim.call('plug#end')
 
