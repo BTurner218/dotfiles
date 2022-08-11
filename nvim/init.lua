@@ -38,4 +38,5 @@ require("plugins/toggleterm")
 require("plugins/neoformat")
 require("plugins/nvim-cmp")
 require('plugins/hop')
+require('plugins/vim-prettier')
 
