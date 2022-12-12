@@ -24,6 +24,7 @@ Plug('tpope/vim-surround')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('phaazon/hop.nvim')
 Plug('prettier/vim-prettier', {['do'] = 'yarn install --frozen-lockfile --production'})
+Plug('github/copilot.vim')
 
 vim.call('plug#end')
 
