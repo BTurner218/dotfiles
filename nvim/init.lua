@@ -25,6 +25,7 @@ Plug('lukas-reineke/indent-blankline.nvim')
 Plug('phaazon/hop.nvim')
 Plug('prettier/vim-prettier', {['do'] = 'yarn install --frozen-lockfile --production'})
 Plug('github/copilot.vim')
+Plug('mbbill/undotree')
 
 vim.call('plug#end')
 
@@ -40,4 +41,5 @@ require("plugins/neoformat")
 require("plugins/nvim-cmp")
 require('plugins/hop')
 require('plugins/vim-prettier')
+require('plugins/undotree')
 
