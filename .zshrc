@@ -167,3 +167,4 @@ if [ -n "$INSIDE_EMACS" ]; then
   print -P "\033AnSiTu %n"
   print -P "\033AnSiTc %d"
 fi
+fpath+=${ZDOTDIR:-~}/.zsh_functions
