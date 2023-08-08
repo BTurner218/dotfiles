@@ -121,6 +121,8 @@ export PATH="/usr/share/dotnet/":$PATH
 
 export PATH=~/Developer/tools/:$PATH
 
+export PATH=$PATH:/usr/local/go/bin
+
 # kdesrc-build #################################################################
 
 ## Add kdesrc-build to PATH
