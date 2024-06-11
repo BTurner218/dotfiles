@@ -115,7 +115,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=~/.local/bin:$PATH
 
-export PATH=${PATH}:$HOME/Android/Sdk/platform-tools/
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/usr/share/dotnet/":$PATH
 
