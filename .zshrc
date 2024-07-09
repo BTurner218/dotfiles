@@ -123,7 +123,7 @@ export PATH="/usr/share/dotnet/":$PATH
 
 export PATH=~/Developer/tools/:$PATH
 
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/brandon/go/bin
 
 # kdesrc-build #################################################################
 
