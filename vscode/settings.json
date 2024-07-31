@@ -1,8 +1,6 @@
 {
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.preferredDarkColorTheme": "Default Dark+",
-  "workbench.preferredLightColorTheme": "Default Light+",
-  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.cursorBlinking": "smooth",
   "editor.bracketPairColorization.enabled": true,
@@ -11,7 +9,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "sync.gist": "154b350dd747372a9eea5befc8ae2287",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -32,17 +29,9 @@
   "editor.rulers": [80],
   "code-runner.enableAppInsights": false,
   "workbench.startupEditor": "none",
-  "redhat.telemetry.enabled": false,
   "telemetry.telemetryLevel": "off",
   "rest-client.enableTelemetry": false,
-  "json.schemas": [
-    {
-      "name": "vscode-expo-manifest",
-      "url": "file:///home/brandont/.config/Code/User/globalStorage/bycedric.vscode-expo/manifest-44.0.0.json",
-      "fileMatch": ["app.json", "app.config.json"]
-    }
-  ],
-  "workbench.sideBar.location": "right",
+  "json.schemas": [],
   "multiCommand.commands": [
     {
       "command": "multiCommand.makeRoom",
@@ -53,7 +42,6 @@
     }
   ],
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.formatOnSave": true,
   "files.exclude": {
     "**/.classpath": true,
@@ -61,13 +49,14 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/brandont/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-  "cmake.environment": {
-    "PATH": "~/kde/usr/bin:${env:PATH}",
-    "XDG_DATA_DIRS": "~/kde/usr/share:${env:XDG_DATA_DIRS}",
-    "XDG_CONFIG_DIRS": "~/kde/usr/etc/xdg:${env:XDG_CONFIG_DIRS}",
-    "QT_PLUGIN_PATH": "~/kde/usr/lib/plugins:${env:QT_PLUGIN_PATH}",
-    "QML2_IMPORT_PATH": "~/kde/usr/lib/qml:${env:QML2_IMPORT_PATH}",
-    "QT_QUICK_CONTROLS_STYLE_PATH": "~/kde/usr/lib/qml/QtQuick/Controls.2/:${env:QT_QUICK_CONTROLS_STYLE_PATH}"
-  }
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false
+  },
+  "github.copilot.editor.enableAutoCompletions": true
 }
+
