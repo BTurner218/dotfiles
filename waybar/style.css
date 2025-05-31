@@ -1,12 +1,11 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.5);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  background-color: rgba(43, 48, 59, 0);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -49,9 +48,9 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
+/* #pulseaudio:hover {
   background-color: #a37800;
-}
+} */
 
 #workspaces button {
   padding: 0 5px;
@@ -64,7 +63,7 @@ button:hover {
 }
 
 #workspaces button.active {
-  background-color: #64727d;
+  background-color: #171421;
   box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -114,12 +113,14 @@ button:hover {
 }
 
 #clock {
-  background-color: #64727d;
+  background-color: #171421;
+  border: 4px solid #171421;
+  border-radius: 14px;
 }
 
 #battery {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #171421;
+  color: #ffffff;
 }
 
 #battery.charging,
@@ -147,23 +148,25 @@ button:hover {
 }
 
 #power-profiles-daemon {
-  padding-right: 15px;
+  padding-right: 19px;
+  background-color: #171421;
+  color: #ffffff;
 }
 
-#power-profiles-daemon.performance {
+/* #power-profiles-daemon.performance {
   background-color: #f53c3c;
   color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-  background-color: #2980b9;
+  background-color: #171421;
   color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
   background-color: #2ecc71;
   color: #000000;
-}
+} */
 
 label:focus {
   background-color: #000000;
@@ -183,11 +186,12 @@ label:focus {
 }
 
 #backlight {
-  background-color: #90b1b1;
+  background-color: #171421;
 }
 
 #network {
-  background-color: #2980b9;
+  background-color: #171421;
+  padding-right: 18px;
 }
 
 #network.disconnected {
@@ -195,8 +199,8 @@ label:focus {
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
-  color: #000000;
+  background-color: #171421;
+  color: #ffffff;
 }
 
 #pulseaudio.muted {
@@ -236,7 +240,7 @@ label:focus {
 }
 
 #tray {
-  background-color: #2980b9;
+  background-color: #171421;
 }
 
 #tray > .passive {
@@ -249,12 +253,13 @@ label:focus {
 }
 
 #idle_inhibitor {
-  background-color: #2d3436;
+  background-color: #171421;
+  padding-right: 18px;
 }
 
 #idle_inhibitor.activated {
   background-color: #ecf0f1;
-  color: #2d3436;
+  color: #171421;
 }
 
 #mpd {
@@ -325,4 +330,9 @@ label:focus {
 
 #privacy-item.audio-out {
   background-color: #0069d4;
+}
+
+#custom-power {
+  padding: 0 4px 0 12px;
+  background-color: #171421;
 }
