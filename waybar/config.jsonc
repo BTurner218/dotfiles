@@ -44,9 +44,9 @@
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-	"persistent-workspaces": {
-	    "*": 5
-	}
+        "persistent-workspaces": {
+            "*": 5
+        }
     },
     "keyboard-state": {
         "numlock": true,
@@ -215,7 +215,7 @@
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
