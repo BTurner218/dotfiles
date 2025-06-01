@@ -8,12 +8,13 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "tray"
+        "wlr/taskbar"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
+        "tray",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -47,6 +48,11 @@
         "persistent-workspaces": {
             "*": 5
         }
+    },
+    "wlr/taskbar": {
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-right": "close"
     },
     "keyboard-state": {
         "numlock": true,
