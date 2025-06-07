@@ -116,8 +116,8 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H:%M}  ",
-        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%A, %B %d, %Y (%I:%M %p)}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
