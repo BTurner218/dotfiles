@@ -246,7 +246,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-  padding-right: 18px;
+  padding-right: 10px;
 }
 
 #idle_inhibitor.activated {
