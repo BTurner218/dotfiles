@@ -185,7 +185,7 @@ label:focus {
 }*/
 
 #network {
-  padding-right: 18px;
+  padding-right: 10px;
 }
 
 #network.disconnected {
@@ -326,4 +326,8 @@ label:focus {
 
 #custom-power {
   padding: 0 4px 0 12px;
+}
+
+#custom-wl-gammarelay-temperature {
+  padding-right: 10px;
 }
