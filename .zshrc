@@ -170,3 +170,4 @@ if [ -n "$INSIDE_EMACS" ]; then
   print -P "\033AnSiTc %d"
 fi
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+export PATH="$HOME/.local/bin:$PATH"
